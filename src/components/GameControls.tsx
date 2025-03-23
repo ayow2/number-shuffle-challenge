@@ -69,7 +69,7 @@ const GameControls: React.FC<GameControlsProps> = ({ moves, onReset, gameWon }) 
       <div className="glass-panel p-4">
         <h2 className="text-lg font-medium text-center mb-2">Goal</h2>
         <p className="text-sm text-apple-gray text-center">
-          Arrange the numbers to match the sequence: <span className="font-mono font-bold">80086190</span>
+          Arrange the numbers to match the sequence: <span className="font-mono font-bold">800861907</span>
         </p>
       </div>
     </motion.div>
