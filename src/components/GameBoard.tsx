@@ -39,7 +39,7 @@ const GameBoard: React.FC<GameBoardProps> = ({ targetNumber, onWin, onMove, rese
     
     setBoard(shuffled);
     setEmptyIndex(shuffled.indexOf(null));
-  }, [targetArray, boardSize]);
+  }, [targetNumber]); // Changed from targetArray to targetNumber to avoid recreating the function on every render
   
   // Function to check if the current board arrangement is winning
   const isWinning = (currentBoard: (number | null)[]) => {
