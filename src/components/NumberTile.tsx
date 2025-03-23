@@ -11,16 +11,19 @@ interface NumberTileProps {
 const NumberTile: React.FC<NumberTileProps> = ({ value, index, isMovable, onClick }) => {
   const isEmpty = value === null;
   
-  const tileClass = `number-tile ${isEmpty ? 'empty' : ''} ${isMovable ? 'movable' : ''}`;
+  const tileClasses = `flex items-center justify-center aspect-square rounded-xl text-xl font-bold cursor-pointer transition-colors 
+    ${isEmpty ? 'bg-transparent' : 'bg-white/80 shadow-sm border border-white/40'} 
+    ${isMovable ? 'hover:bg-blue-50' : 'cursor-not-allowed'} 
+    ${isEmpty ? 'pointer-events-none' : ''}`;
   
   return (
     <motion.div 
-      className={tileClass}
+      className={tileClasses}
       onClick={isMovable ? onClick : undefined}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ 
         scale: 1,
-        opacity: isEmpty ? 0.5 : 1,
+        opacity: isEmpty ? 0 : 1,
       }}
       transition={{ 
         type: "spring",
@@ -28,6 +31,7 @@ const NumberTile: React.FC<NumberTileProps> = ({ value, index, isMovable, onClic
         damping: 20,
         delay: index * 0.05 
       }}
+      whileHover={isMovable ? { scale: 1.05 } : undefined}
       whileTap={isMovable ? { scale: 0.95 } : undefined}
       layout
     >
