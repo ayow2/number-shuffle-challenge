@@ -1,6 +1,5 @@
-
 import { motion, AnimatePresence } from "framer-motion";
-import { Trophy, Timer, RefreshCw } from "lucide-react";
+import { Trophy, Timer, RefreshCw, Zap } from "lucide-react";
 
 interface WinModalProps {
   isOpen: boolean;
