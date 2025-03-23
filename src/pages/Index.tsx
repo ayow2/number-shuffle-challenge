@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import GameBoard from "../components/GameBoard";
 import GameControls from "../components/GameControls";
@@ -7,7 +6,7 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { LightbulbIcon } from "lucide-react";
 
-const TARGET_NUMBER = "800861907";
+const TARGET_NUMBER = "80086190";
 
 const Index = () => {
   const [moves, setMoves] = useState(0);
